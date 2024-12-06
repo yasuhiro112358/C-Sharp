@@ -3,8 +3,16 @@
 
 using System;
 
-class MyApp {
-    static void Main() {
+class MyApp
+{
+    static void Main()
+    {
+        // This is a single-line comment
+
+        /*
+        This is a multi-line comment
+        */
+        
         Console.WriteLine("Hello, World!");
     }
 }
