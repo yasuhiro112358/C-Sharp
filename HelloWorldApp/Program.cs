@@ -178,15 +178,61 @@ class MyApp
         // do-while
         // ========================
 
-        var i = 0;
+        // var i = 0;
 
-        do
+        // do
+        // {
+        //     Console.WriteLine(i);
+        //     i++;
+        // } while (i < 10);
+
+
+
+        // ========================
+        // for
+        // ========================
+
+        // for (int i = 0; i < 10; i++)
+        // {
+        //     Console.WriteLine(i);
+        // }
+
+
+
+        // ========================
+        // Array
+        // ========================
+        // int[] scores = new int[3];
+        // scores[0] = 10;
+        // scores[1] = 30;
+        // scores[2] = 20;
+
+        // int[] scores = new int[] { 10, 30, 20 };
+
+        // int[] scores = { 10, 30, 20 };
+
+        // var scores = new[] { 10, 30, 20 };
+
+        // scores[1] = 40;
+        // Console.WriteLine(scores[1]);
+
+
+
+        // ========================
+        // foreach
+        // ========================
+
+        var scores = new[] { 10, 30, 20 };
+
+        // for (int i = 0; i < scores.Length; i++)
+        // {
+        //     Console.WriteLine(scores[i]);
+        // }
+
+        foreach (int score in scores)
         {
-            Console.WriteLine(i);
-            i++;
-        } while (i < 10);
-
-
+            Console.WriteLine(score);
+        }
 
     }
 }
