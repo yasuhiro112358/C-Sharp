@@ -5,9 +5,9 @@ using System;
 
 class Program
 {
-    static void SayHi()
+    static void SayHi(string name, int age = 20)
     {
-        Console.WriteLine("Hi!");
+        Console.WriteLine($"Hi! {name} ({age})");
     }
 
     static string GetHi()
@@ -19,7 +19,10 @@ class Program
 
     static void Main()
     {
-        SayHi();
+        SayHi("Alice", 30); // Hi! Alice (30)
+        SayHi("Bob"); // Hi! Bob (20)
+        SayHi(age: 25, name: "Charlie"); // Hi! Charlie (25)
+
         Console.WriteLine(GetHi());
         Console.WriteLine(GetHi2());
     }
