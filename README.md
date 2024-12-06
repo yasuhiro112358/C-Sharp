@@ -6,6 +6,7 @@
 dotnet new console -n HelloWorldApp
 
 # Create .gitignore
+cd HelloWorldApp
 dotnet new gitignore
 ```
 
