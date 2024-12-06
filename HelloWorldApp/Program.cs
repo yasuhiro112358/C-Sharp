@@ -13,6 +13,13 @@ class MyApp
         This is a multi-line comment
         */
         
-        Console.WriteLine("Hello, World!");
+        // Declare a variable
+        // string msg = "Hello, World!";
+
+        // Declare a constant
+        const string msg = "Hello, World!";
+
+        // Display the message onto the console
+        Console.WriteLine(msg);
     }
 }
