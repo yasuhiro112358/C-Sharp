@@ -6,11 +6,42 @@ using System;
 
 class User
 {
-    public string name = "me";
+    public string name;
 
-    public void SayHi()
+
+    // コンストラクタ
+    public User(string name)
+    {
+        this.name = name;
+    }
+
+    // コンストラクタのオーバーロード
+    public User()
+    {
+        this.name = "Nobody";
+    }
+
+    public virtual void SayHi()
     {
         Console.WriteLine($"Hi! {this.name}");
+    }
+}
+
+class AdminUser : User
+{
+    public AdminUser(string name) : base(name)
+    {
+
+    }
+
+    public void SayHello()
+    {
+        Console.WriteLine($"Hello! {this.name}");
+    }
+
+    public override void SayHi()
+    {
+        Console.WriteLine($"[Admin] Hi! {this.name}");
     }
 }
 
@@ -40,8 +71,14 @@ class Program
 
         // ==================
 
+        User tom = new User("Tom");
+        tom.SayHi();
+
         User user = new User();
-        Console.WriteLine(user.name); // me
-        user.SayHi(); // Hi! me
+        user.SayHi();
+
+        AdminUser bob = new AdminUser("Bob");
+        bob.SayHi();
+        bob.SayHello();
     }
 }
