@@ -3,6 +3,18 @@
 
 using System;
 
+
+class User
+{
+    public string name = "me";
+
+    public void SayHi()
+    {
+        Console.WriteLine($"Hi! {this.name}");
+    }
+}
+
+
 class Program
 {
     static void SayHi(string name, int age = 20)
@@ -25,5 +37,11 @@ class Program
 
         Console.WriteLine(GetHi());
         Console.WriteLine(GetHi2());
+
+        // ==================
+
+        User user = new User();
+        Console.WriteLine(user.name); // me
+        user.SayHi(); // Hi! me
     }
 }
