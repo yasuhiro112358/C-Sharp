@@ -6,8 +6,15 @@ using System;
 
 class User
 {
-    public string name;
+    // private string name;
+    protected string name;
 
+    // プロパティ
+    public string Name
+    {
+        get { return this.name; }
+        set { this.name = value; }
+    }
 
     // コンストラクタ
     public User(string name)
@@ -73,6 +80,10 @@ class Program
 
         User tom = new User("Tom");
         tom.SayHi();
+        Console.WriteLine(tom.Name);
+        tom.Name = "Tommy";
+        Console.WriteLine(tom.Name);
+
 
         User user = new User();
         user.SayHi();
