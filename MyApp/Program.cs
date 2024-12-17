@@ -6,6 +6,9 @@ using System;
 
 class User
 {
+    // 静的メンバ
+    private static int count = 0;
+
     // private string name;
     protected string name;
 
@@ -20,12 +23,20 @@ class User
     public User(string name)
     {
         this.name = name;
+
+        // 静的メンバのインクリメント
+        User.count++;
     }
 
     // コンストラクタのオーバーロード
     public User()
     {
         this.name = "Nobody";
+    }
+
+    public static void GetCount()
+    {
+        Console.WriteLine($"# of instances: {User.count}");
     }
 
     public virtual void SayHi()
@@ -69,6 +80,9 @@ class Program
 
     static void Main()
     {
+        // Show the number of instances
+        User.GetCount();
+
         SayHi("Alice", 30); // Hi! Alice (30)
         SayHi("Bob"); // Hi! Bob (20)
         SayHi(age: 25, name: "Charlie"); // Hi! Charlie (25)
@@ -91,5 +105,8 @@ class Program
         AdminUser bob = new AdminUser("Bob");
         bob.SayHi();
         bob.SayHello();
+
+        // Show the number of instances
+        User.GetCount();
     }
 }
