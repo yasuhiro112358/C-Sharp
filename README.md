@@ -24,6 +24,9 @@ dotnet run
 # dotnet new <TEMPLATE> -n <PROJECT_NAME>
 dotnet new console -n HelloWorldApp
 
+# Create new class
+dotnet new class -n TextNormalizer
+
 # Compile the project
 dotnet build
 
